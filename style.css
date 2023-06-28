@@ -35,7 +35,7 @@
 nav{
     display: flex;
     justify-content: space-between;
-    margin: 20px 0px;
+    margin: 20px 10px;
 }
 
 .header_logo{
@@ -155,6 +155,43 @@ nav{
     font-weight: 700;
 }
 
+.burger{
+    display: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 9px 2px;
+}
+
+.burger__item{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #15193D;
+    font-size: 0;
+    color: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.burger__item:before,
+.burger__item:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    background-color: #15193D;
+}
+.burger__item:before {
+    top: -8px;
+}
+
+.burger__item::after {
+    bottom: -8px;
+}
+
 
 /* Intro
 =============================================================================== */
@@ -164,10 +201,10 @@ nav{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 600px;
 }
 
 .intro_inner{
+    margin: 0px 10px;
     display: flex;
     justify-content: space-between;
 }
@@ -231,7 +268,7 @@ nav{
     justify-content: space-between;
     margin-top: 140px;
     border-radius: 20px;
-    width: 600px;
+    max-width: 600px;
 }
 
 .intro_right_img{
@@ -311,6 +348,8 @@ nav{
     margin-bottom: 17px;
 }
 
+/* Progress
+=================================================================================== */
 
 .progress_inner{
     display: flex;
@@ -325,11 +364,13 @@ nav{
 }
 
 .progress_top_inner{
+    margin: 0px 10px;
     display: flex;
     flex-direction: column;
 }
 
 .progress_top_inner_title{
+    display: flex;
     font-size: 42px;
     font-weight: 700;
     padding-top: 76px;
@@ -337,7 +378,8 @@ nav{
 }
 
 .progress_top_text{
-    width: 704px;
+    display: flex;
+    max-width: 704px;
     font-size: 16px;
     font-weight: 300;
     line-height: 19px;
@@ -504,12 +546,13 @@ nav{
     justify-content: left;
     padding: 92px 72px 72px 64px;
     background-color: #ffffffce;
-    width: 550px;
+    max-width: 600px;
     border-radius: 0px 0px 20px 20px;
     margin-left: 100px;
 }
 
 .contacts_block_title{
+    display: flex;
     font-size: 42px;
     font-weight: 700;
     text-transform: uppercase;
@@ -517,6 +560,7 @@ nav{
 }
 
 .contacts_addresses_title{
+    display: flex;
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -641,4 +685,95 @@ footer{
 
 .footer_right{
     display: flex;
+}
+
+@media (max-width: 1000px){
+    /* header
+    ========================================= */
+
+    .header_logo{
+        max-width: 130px;
+    }
+
+    .header_logo_title{
+        font-size: 8px;
+    }
+
+    #scroll{
+        position: relative;
+        top: 0px;
+    }
+
+    .buttons{
+        display: none;
+    }
+
+    .header_contacts_element{
+        font-size: 11px;
+    }
+
+    .header_numbers_element{
+        font-size: 13px;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .header_buttons{
+        display: none;
+    }
+
+    .button_top_element{
+        font-size: 10px;
+    }
+    
+    .buttons_top_inner{
+        
+    }
+
+    /* intro
+    ========================================== */
+
+    .intro_inner{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* contacts
+    ========================================== */
+    .contacts_inner{
+        display: flex;
+        justify-content: center;
+    }
+
+    .contacts_block{
+        margin-left: 0px;
+    }
+
+    /* Footer
+    ========================================== */
+
+    .footer_text_left{
+        font-size: 9px;
+    }
+
+    .footer_text_right{
+        font-size: 10px;
+    }
+
+    .footer_inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer_right{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+
 }
